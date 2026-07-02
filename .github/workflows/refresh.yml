@@ -29,6 +29,7 @@ jobs:
         run: npx tsx scripts/refresh.ts 25
 
       - name: 有变化就提交
+        id: commit
         run: |
           git config user.name "gh-discover-bot"
           git config user.email "bot@users.noreply.github.com"
@@ -36,6 +37,15 @@ jobs:
             git add src/data/feed.json
             git commit -m "chore: 每日刷新 AI 应用榜单 ($(date -u +%F))"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           else
             echo "榜单无变化，跳过提交"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
+
+      # bot 用 GITHUB_TOKEN 推的提交不会触发 Vercel 自动部署，主动 curl Deploy Hook
+      - name: 触发 Vercel 重部署
+        if: steps.commit.outputs.changed == 'true' && env.HOOK != ''
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: curl -sS -X POST "$HOOK"
