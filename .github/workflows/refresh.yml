@@ -1,0 +1,41 @@
+name: 每日刷新 AI 应用榜单
+
+on:
+  schedule:
+    - cron: "0 8 * * *" # 每天 08:00 UTC（约北京 16:00）
+  workflow_dispatch: {} # 支持手动触发
+
+permissions:
+  contents: write # 允许提交 feed.json
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: 跑 pipeline 生成榜单
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Actions 自带，提 GitHub API 限流
+        run: npx tsx scripts/refresh.ts 25
+
+      - name: 有变化就提交
+        run: |
+          git config user.name "gh-discover-bot"
+          git config user.email "bot@users.noreply.github.com"
+          if ! git diff --quiet src/data/feed.json; then
+            git add src/data/feed.json
+            git commit -m "chore: 每日刷新 AI 应用榜单 ($(date -u +%F))"
+            git push
+          else
+            echo "榜单无变化，跳过提交"
+          fi

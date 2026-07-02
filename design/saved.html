@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>我的收藏 — gh-discover</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>html,body{background:#0a0a0b;}</style>
+</head>
+<body class="text-zinc-100 font-sans antialiased">
+
+<header class="sticky top-0 z-30 border-b border-zinc-900 bg-zinc-950/80 backdrop-blur">
+  <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+    <div class="flex items-center gap-3">
+      <a class="text-sm text-zinc-400 hover:text-white transition">← 返回发现</a>
+      <span class="text-zinc-700">/</span>
+      <span class="text-sm font-bold">gh-discover</span>
+    </div>
+    <span class="text-xs text-zinc-500">收藏存在本地浏览器，不上传</span>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-6 py-10">
+  <div class="flex items-end justify-between mb-8">
+    <h1 class="text-3xl font-bold tracking-tight">我的收藏 <span class="text-zinc-500 text-xl font-normal">· 3</span></h1>
+    <button class="text-sm text-zinc-500 hover:text-zinc-300 transition">清空</button>
+  </div>
+
+  <div class="grid grid-cols-3 gap-5">
+
+    <!-- 收藏卡 -->
+    <article class="group rounded-2xl border border-zinc-800 bg-zinc-950/60 p-6 hover:border-zinc-700 transition flex flex-col">
+      <div class="flex flex-wrap gap-1.5 mb-4">
+        <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>Python</span>
+        <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-400">#AI 剪辑</span>
+      </div>
+      <div class="text-xs text-zinc-500">nano-labs /</div>
+      <div class="text-xl font-bold tracking-tight">whisper-flow</div>
+      <div class="flex items-center gap-4 mt-3 text-sm">
+        <span class="text-zinc-300">★ 12.3k</span>
+        <span class="text-emerald-400">+2,047</span>
+      </div>
+      <p class="text-sm text-zinc-400 leading-relaxed mt-4 flex-1">长视频自动切成带字幕的竖屏短视频，本地跑、免 API。</p>
+      <div class="flex items-center gap-2 mt-5">
+        <button class="flex-1 h-9 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition text-sm">↗ GitHub</button>
+        <button class="h-9 w-9 rounded-lg bg-zinc-800 hover:bg-rose-500/20 hover:text-rose-400 transition text-sm">♥</button>
+      </div>
+    </article>
+
+    <article class="group rounded-2xl border border-zinc-800 bg-zinc-950/60 p-6 hover:border-zinc-700 transition flex flex-col">
+      <div class="flex flex-wrap gap-1.5 mb-4">
+        <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-blue-300"></span>TypeScript</span>
+        <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-400">#Agent 工具</span>
+      </div>
+      <div class="text-xs text-zinc-500">agent-ui /</div>
+      <div class="text-xl font-bold tracking-tight">copilot-canvas</div>
+      <div class="flex items-center gap-4 mt-3 text-sm">
+        <span class="text-zinc-300">★ 8.1k</span>
+        <span class="text-emerald-400">+1,530</span>
+      </div>
+      <p class="text-sm text-zinc-400 leading-relaxed mt-4 flex-1">给 AI Agent 用的无限画布，实时看它摆卡片、连线、跑工具。</p>
+      <div class="flex items-center gap-2 mt-5">
+        <button class="flex-1 h-9 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition text-sm">↗ GitHub</button>
+        <button class="h-9 w-9 rounded-lg bg-zinc-800 hover:bg-rose-500/20 hover:text-rose-400 transition text-sm">♥</button>
+      </div>
+    </article>
+
+    <article class="group rounded-2xl border border-zinc-800 bg-zinc-950/60 p-6 hover:border-zinc-700 transition flex flex-col">
+      <div class="flex flex-wrap gap-1.5 mb-4">
+        <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-yellow-300"></span>Rust</span>
+        <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-400">#本地大模型</span>
+      </div>
+      <div class="text-xs text-zinc-500">ferrous /</div>
+      <div class="text-xl font-bold tracking-tight">llama-tray</div>
+      <div class="flex items-center gap-4 mt-3 text-sm">
+        <span class="text-zinc-300">★ 5.6k</span>
+        <span class="text-emerald-400">+3,210</span>
+      </div>
+      <p class="text-sm text-zinc-400 leading-relaxed mt-4 flex-1">常驻托盘的本地大模型开关，点一下起 OpenAI 兼容接口。</p>
+      <div class="flex items-center gap-2 mt-5">
+        <button class="flex-1 h-9 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition text-sm">↗ GitHub</button>
+        <button class="h-9 w-9 rounded-lg bg-zinc-800 hover:bg-rose-500/20 hover:text-rose-400 transition text-sm">♥</button>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+</body>
+</html>

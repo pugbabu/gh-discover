@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>whisper-flow · nano-labs — gh-discover</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>html,body{background:#0a0a0b;}</style>
+</head>
+<body class="text-zinc-100 font-sans antialiased">
+
+<!-- 顶栏 -->
+<header class="sticky top-0 z-30 border-b border-zinc-900 bg-zinc-950/80 backdrop-blur">
+  <div class="max-w-5xl mx-auto flex items-center justify-between px-6 py-4">
+    <div class="flex items-center gap-3">
+      <a class="text-sm text-zinc-400 hover:text-white transition">← 返回发现</a>
+      <span class="text-zinc-700">/</span>
+      <span class="text-sm font-bold">gh-discover</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <button class="h-9 px-4 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition text-sm">♡ 收藏</button>
+      <button class="h-9 px-4 rounded-lg bg-white text-zinc-900 font-semibold text-sm hover:bg-zinc-200 transition">↗ 去 GitHub</button>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-6 py-10">
+
+  <!-- Hero -->
+  <div class="flex flex-wrap gap-2 mb-4">
+    <span class="text-[11px] px-2.5 py-1 rounded-md bg-zinc-800 text-zinc-300 flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-blue-400"></span>Python</span>
+    <span class="text-[11px] px-2.5 py-1 rounded-md bg-zinc-800 text-zinc-300">#AI 剪辑</span>
+    <span class="text-[11px] px-2.5 py-1 rounded-md bg-amber-500/15 text-amber-300 border border-amber-500/25">🔥 新颖度 高</span>
+  </div>
+  <div class="text-zinc-500">nano-labs /</div>
+  <h1 class="text-5xl font-bold tracking-tight mt-1">whisper-flow</h1>
+
+  <!-- 势能条 -->
+  <div class="mt-8 grid grid-cols-4 gap-4">
+    <div class="rounded-2xl border border-zinc-800 bg-zinc-950/60 p-5"><div class="text-3xl font-bold">12.3k</div><div class="text-xs text-zinc-500 mt-1">总 star</div></div>
+    <div class="rounded-2xl border border-zinc-800 bg-zinc-950/60 p-5"><div class="text-3xl font-bold text-emerald-400">+2,047</div><div class="text-xs text-zinc-500 mt-1">今日新增</div></div>
+    <div class="rounded-2xl border border-zinc-800 bg-zinc-950/60 p-5"><div class="text-3xl font-bold text-indigo-300">#2</div><div class="text-xs text-zinc-500 mt-1">惊喜分排名</div></div>
+    <div class="rounded-2xl border border-zinc-800 bg-zinc-950/60 p-5"><div class="text-3xl font-bold">18 天</div><div class="text-xs text-zinc-500 mt-1">建仓时长</div></div>
+  </div>
+
+  <!-- 正文 + 侧栏 -->
+  <div class="mt-10 grid grid-cols-[1fr_260px] gap-10">
+    <article class="space-y-9">
+      <section>
+        <h2 class="text-xs font-semibold text-indigo-400 tracking-widest mb-3">是啥</h2>
+        <p class="text-[17px] leading-8 text-zinc-200">whisper-flow 是一个本地运行的长视频自动切片工具。把一条播客、直播录像或长视频丢进去，它用语音识别 + 语义分析找出"高能片段"，自动加卡点、配竖屏字幕，直接吐出一批适合发抖音 / 小红书 / YouTube Shorts 的短视频切片，全程不需要上传云端、不需要 API key。</p>
+      </section>
+      <section>
+        <h2 class="text-xs font-semibold text-amber-400 tracking-widest mb-3">凭啥火</h2>
+        <p class="text-[17px] leading-8 text-zinc-200">上周作者发布了一条演示视频——"把一期 2 小时播客自动切成 30 条短视频"，冲上了 Hacker News 首页。它精准戳中了自媒体创作者的核心痛点：切片剪辑最耗时、最枯燥。加上"本地跑、不上传、免 API"打消了内容隐私顾虑，短短三天涨了 2000 多个 star，惊喜分冲到当日第 2。</p>
+      </section>
+      <section>
+        <h2 class="text-xs font-semibold text-zinc-400 tracking-widest mb-3">怎么跑</h2>
+        <pre class="rounded-xl bg-black border border-zinc-800 p-4 text-[13px] text-zinc-300 overflow-x-auto"><code>pip install whisper-flow
+whisper-flow ./podcast.mp4 --clips 30 --vertical</code></pre>
+        <p class="text-sm text-zinc-500 mt-3">首次运行会下载本地模型（约 1.5GB），之后完全离线。</p>
+      </section>
+    </article>
+
+    <!-- 侧栏元信息 -->
+    <aside class="space-y-6">
+      <div class="rounded-2xl border border-zinc-800 bg-zinc-950/60 p-5 space-y-4 text-sm">
+        <div><div class="text-xs text-zinc-500 mb-1">主要语言</div><div>Python</div></div>
+        <div><div class="text-xs text-zinc-500 mb-1">开源协议</div><div>MIT</div></div>
+        <div><div class="text-xs text-zinc-500 mb-1">最近更新</div><div>2 小时前</div></div>
+        <div><div class="text-xs text-zinc-500 mb-2">Topics</div>
+          <div class="flex flex-wrap gap-1.5">
+            <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-400">whisper</span>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-400">video</span>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-400">shorts</span>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-2xl border border-indigo-500/20 bg-indigo-500/5 p-5">
+        <div class="text-sm text-zinc-300 mb-3">喜欢这个？</div>
+        <button class="w-full h-10 rounded-lg bg-white text-zinc-900 font-semibold text-sm mb-2">♡ 收藏</button>
+        <button class="w-full h-10 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition text-sm">↗ 去 GitHub</button>
+      </div>
+    </aside>
+  </div>
+
+  <p class="mt-14 text-xs text-zinc-600 border-t border-zinc-900 pt-6">AI 讲解由 DeepSeek 基于项目 README 生成，仅供参考 · gh-discover 每日更新 GitHub 上正在爆发的 AI 应用</p>
+</main>
+
+</body>
+</html>
